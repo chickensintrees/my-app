@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
         <p>{message}</p>
         <button onClick={handleClick}>
-          Do Something Silly
+          Do Something Silly Now!
         </button>
       </header>
     </div>
