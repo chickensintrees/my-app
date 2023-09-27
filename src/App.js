@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
-import './App.css';
+import React from 'react';
+import LoopingAudio from './LoopingAudio';
 
 function App() {
-  const [message, setMessage] = useState('Click the button to do something silly!');
-
-  const handleClick = () => {
-    setMessage('You did something silly!');
-  };
-
   return (
     <div className="App">
       <header className="App-header">
-        <p>{message}</p>
-        <button onClick={handleClick}>
-          Do Something Silly Now!
-        </button>
+        <LoopingAudio />
       </header>
     </div>
   );
