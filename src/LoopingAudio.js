@@ -8,11 +8,11 @@ function LoopingAudio() {
 
   const handlePlay = () => {
     const currentTime = new Date().getTime();
-    const loopTime = audioRef.current.duration * 1000; // Convert audio duration to milliseconds
+    const loopTime = audioRef.current.duration * 1000;
     const positionInLoop = currentTime % loopTime;
 
     if (audioRef.current.paused) {
-        audioRef.current.currentTime = positionInLoop / 1000; // Convert back to seconds
+        audioRef.current.currentTime = positionInLoop / 1000;
         setPlaying(true);
     } else {
         setPlaying(false);
@@ -36,7 +36,7 @@ function LoopingAudio() {
   return (
     <div>
       <button onClick={handlePlay} disabled={!loaded} className="center">Activate Wave Distorter</button>
-      <audio ref={audioRef} src={"/audio/Resonate_mixdown4.mp3"} loop onLoadedData={() => setLoaded(true)} />
+      <audio ref={audioRef} src="/my-app/audio/Resonate_mixdown4.mp3" loop onLoadedData={() => setLoaded(true)} />
     </div>
   );
 }
